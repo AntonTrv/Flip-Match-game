@@ -1,0 +1,15 @@
+.field-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 410px;
+}
+.field {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 408px;
+  width: 408px;
+  background-color: grey;
+  border: 1px solid black;
+}

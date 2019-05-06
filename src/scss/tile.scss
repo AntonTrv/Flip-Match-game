@@ -1,0 +1,45 @@
+.flip-tile {
+  height: 100px;
+  min-width: 100px;
+  border: none;
+  background-color: transparent;
+  border: 1px solid black;
+  background-color: grey;
+}
+
+.teal {
+  background-color: teal;
+}
+
+.red {
+  background-color: red;
+}
+
+.navy {
+  background-color: navy;
+}
+
+.green {
+  background-color: green;
+}
+
+.silver {
+  background-color: silver;
+}
+
+.wheat {
+  background-color: wheat;
+}
+
+.fuchsia {
+  background-color: fuchsia;
+}
+
+.aqua {
+  background-color: aqua;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+  background-color: grey;
+}
