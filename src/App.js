@@ -13,6 +13,7 @@ class App extends React.Component {
       processing: [],
       foundTiles: 0,
       seconds: 0,
+      inGame: false,
     };
 
     this.initGame = this.initGame.bind(this);
@@ -33,11 +34,12 @@ class App extends React.Component {
     arr.sort(() => Math.random() - 0.5);
     this.setState({ tiles: arr });
     this.timeInterval();
+    this.setState({ inGame: true });
   }
 
   /*
     controls flip of tiles,
-    gathers info about tile in guess array,
+    gathers info about tile in the guess array,
 
   */
   handleClick(e) {
@@ -120,13 +122,13 @@ class App extends React.Component {
     minutes.innerHTML = '00';
     seconds.innerHTML = '00';
     this.setState({ tiles: [] });
+    this.setState({ inGame: false });
   }
 
   render() {
-    console.log(this.state.rand);
     return (
       <div className="app">
-        <Field data={this.state.tiles} handleClick={this.handleClick} starter={this.initGame} />
+        <Field data={this.state.tiles} handleClick={this.handleClick} game={this.state.inGame} starter={this.initGame} />
       </div>
 
     );
